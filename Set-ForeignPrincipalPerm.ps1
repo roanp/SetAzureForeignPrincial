@@ -15,7 +15,7 @@ function Set-ForeignPrincipalPerm {
    
     try {
         Write-Host "Now trying to add VIT FG to " $SubscriptionDetails.Name -ForegroundColor Green
-        New-AZRoleAssignment -ObjectId $VitFGID -Scope "/subscriptions/$SubscriptionID" -RoleDefinitionName Owner -ErrorAction Stop
+        New-AZRoleAssignment -ObjectId $VitFGID -Scope "/subscriptions/$SubscriptionID" -RoleDefinitionName Owner  -ObjectType ForeignGroup -ErrorAction Stop
         
         
     }
